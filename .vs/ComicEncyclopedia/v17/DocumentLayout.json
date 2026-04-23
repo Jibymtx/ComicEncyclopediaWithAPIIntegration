@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ComicEncyclopedia_JibraeelFinished\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|d:\\comicencyclopedia_jibraeelfinished\\src\\comicencyclopedia.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|solutionrelative:src\\comicencyclopedia.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A522D31B-2C63-4E0A-9E87-4BCC7FD880C3}|src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj|d:\\comicencyclopedia_jibraeelfinished\\src\\comicencyclopedia.business\\helpers\\textsanitizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A522D31B-2C63-4E0A-9E87-4BCC7FD880C3}|src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj|solutionrelative:src\\comicencyclopedia.business\\helpers\\textsanitizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|d:\\comicencyclopedia_jibraeelfinished\\src\\comicencyclopedia.web\\comicencyclopedia.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|solutionrelative:src\\comicencyclopedia.web\\comicencyclopedia.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|d:\\comicencyclopedia_jibraeelfinished\\src\\comicencyclopedia.web\\controllers\\api\\comicsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|solutionrelative:src\\comicencyclopedia.web\\controllers\\api\\comicsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A522D31B-2C63-4E0A-9E87-4BCC7FD880C3}|src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj|d:\\comicencyclopedia_jibraeelfinished\\src\\comicencyclopedia.business\\services\\bookcoverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A522D31B-2C63-4E0A-9E87-4BCC7FD880C3}|src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj|solutionrelative:src\\comicencyclopedia.business\\services\\bookcoverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|d:\\comicencyclopedia_jibraeelfinished\\src\\comicencyclopedia.web\\controllers\\api\\emailapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74855D4F-EF1F-4F7D-BA6C-B92861CA2784}|src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj|solutionrelative:src\\comicencyclopedia.web\\controllers\\api\\emailapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComicEncyclopedia.Web.csproj",
+              "DocumentMoniker": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj",
+              "RelativeDocumentMoniker": "src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj",
+              "ToolTip": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj",
+              "RelativeToolTip": "src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-20T16:22:19.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TextSanitizer.cs",
+              "DocumentMoniker": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\Helpers\\TextSanitizer.cs",
+              "RelativeDocumentMoniker": "src\\ComicEncyclopedia.Business\\Helpers\\TextSanitizer.cs",
+              "ToolTip": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\Helpers\\TextSanitizer.cs",
+              "RelativeToolTip": "src\\ComicEncyclopedia.Business\\Helpers\\TextSanitizer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T09:44:27.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookCoverService.cs",
+              "DocumentMoniker": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\Services\\BookCoverService.cs",
+              "RelativeDocumentMoniker": "src\\ComicEncyclopedia.Business\\Services\\BookCoverService.cs",
+              "ToolTip": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\Services\\BookCoverService.cs",
+              "RelativeToolTip": "src\\ComicEncyclopedia.Business\\Services\\BookCoverService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T09:44:51.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ComicEncyclopedia.Web\\Program.cs",
+              "ToolTip": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\Program.cs",
+              "RelativeToolTip": "src\\ComicEncyclopedia.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T09:45:51.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ComicsApiController.cs",
+              "DocumentMoniker": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\Controllers\\Api\\ComicsApiController.cs",
+              "RelativeDocumentMoniker": "src\\ComicEncyclopedia.Web\\Controllers\\Api\\ComicsApiController.cs",
+              "ToolTip": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\Controllers\\Api\\ComicsApiController.cs",
+              "RelativeToolTip": "src\\ComicEncyclopedia.Web\\Controllers\\Api\\ComicsApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T09:46:53.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailApiController.cs",
+              "DocumentMoniker": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\Controllers\\Api\\EmailApiController.cs",
+              "RelativeDocumentMoniker": "src\\ComicEncyclopedia.Web\\Controllers\\Api\\EmailApiController.cs",
+              "ToolTip": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\Controllers\\Api\\EmailApiController.cs",
+              "RelativeToolTip": "src\\ComicEncyclopedia.Web\\Controllers\\Api\\EmailApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T09:47:11.728Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

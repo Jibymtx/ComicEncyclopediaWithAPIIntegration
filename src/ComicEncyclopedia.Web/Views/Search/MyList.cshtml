@@ -1,0 +1,56 @@
+@model SearchListViewModel
+@{ ViewData["Title"] = "My Search List"; }
+
+<h2><i class="bi bi-bookmark-star me-2"></i>My Search List</h2>
+<p class="text-muted">@Model.Count saved comics</p>
+
+@if (!Model.SavedComics.Any())
+{
+    <div class="alert alert-info">
+        <i class="bi bi-info-circle me-2"></i>You haven't saved any comics yet.
+        <a asp-controller="Comics" asp-action="Index">Browse comics</a> and add them to your list.
+    </div>
+}
+else
+{
+    <div class="mb-3">
+        <form asp-action="Clear" method="post" onsubmit="return confirm('Clear all saved comics?');">
+            <button type="submit" class="btn btn-outline-danger btn-sm">
+                <i class="bi bi-trash me-1"></i>Clear All
+            </button>
+        </form>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comic in Model.SavedComics)
+                {
+                    <tr>
+                        <td><a asp-controller="Comics" asp-action="Details" asp-route-id="@comic.BLRecordID">@comic.Title</a></td>
+                        <td>@comic.Author</td>
+                        <td><small>@comic.Genre</small></td>
+                        <td>@(comic.PublicationYear?.ToString() ?? "N/A")</td>
+                        <td>
+                            <form asp-action="Remove" method="post" style="display:inline;">
+                                <input type="hidden" name="comicId" value="@comic.BLRecordID" />
+                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

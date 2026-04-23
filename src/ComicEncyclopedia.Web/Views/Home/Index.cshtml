@@ -1,0 +1,79 @@
+@model HomeViewModel
+@{ ViewData["Title"] = "Home"; }
+
+<div class="text-center mb-5">
+    <h1 class="display-4"><i class="bi bi-book-half text-primary me-3"></i>@Model.WelcomeMessage</h1>
+    <p class="lead text-muted">Explore our collection of Fantasy, Horror, and Science Fiction comics</p>
+</div>
+
+@if (!Model.IsDataLoaded)
+{
+    <div class="alert alert-warning text-center">
+        <h4><i class="bi bi-exclamation-triangle me-2"></i>No Data Loaded</h4>
+        <p>Please upload a CSV file to start exploring comics.</p>
+        @if (User.IsInRole("Staff") || User.IsInRole("Admin"))
+        {
+            <a asp-controller="Comics" asp-action="Upload" class="btn btn-fbz"><i class="bi bi-upload me-2"></i>Upload CSV File</a>
+        }
+        else
+        {
+            <p class="text-muted">Contact staff to load the dataset.</p>
+        }
+    </div>
+}
+else
+{
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">
+                    <h2 class="display-5">@Model.FilteredComics.ToString("N0")</h2>
+                    <p class="mb-0">Comics Available</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-success text-white">
+                <div class="card-body text-center">
+                    <h2 class="display-5">3</h2>
+                    <p class="mb-0">Genres: Fantasy, Horror, Sci-Fi</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-info text-white">
+                <div class="card-body text-center">
+                    <h2 class="display-5">@(Model.LastLoadedDate?.ToString("MMM dd") ?? "N/A")</h2>
+                    <p class="mb-0">Last Updated</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-4">
+        <a asp-controller="Comics" asp-action="Index" class="btn btn-fbz btn-lg me-2"><i class="bi bi-search me-2"></i>Browse All Comics</a>
+        <a asp-controller="Comics" asp-action="AdvancedSearch" class="btn btn-outline-primary btn-lg"><i class="bi bi-sliders me-2"></i>Advanced Search</a>
+    </div>
+
+    @if (Model.FeaturedComics.Any())
+    {
+        <h3 class="mb-3"><i class="bi bi-star me-2"></i>Featured Comics</h3>
+        <div class="row">
+            @foreach (var comic in Model.FeaturedComics)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card card-comic h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@comic.Title</h5>
+                            <p class="card-text text-muted">@comic.Author</p>
+                            <p class="card-text"><small>@comic.Genre</small></p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a asp-controller="Comics" asp-action="Details" asp-route-id="@comic.BLRecordID" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}

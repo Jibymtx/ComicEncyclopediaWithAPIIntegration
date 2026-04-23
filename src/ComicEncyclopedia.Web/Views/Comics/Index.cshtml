@@ -1,0 +1,149 @@
+@model ComicListViewModel
+@{ ViewData["Title"] = "Browse Comics"; }
+
+<h2><i class="bi bi-collection me-2"></i>Browse Comics</h2>
+<p class="text-muted">@Model.StatusMessage</p>
+
+@if (!Model.IsDataLoaded)
+{
+    <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle me-2"></i>No data loaded. Please upload a CSV file.
+    </div>
+}
+else
+{
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Index">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Search Title</label>
+                        <input type="text" name="searchTitle" class="form-control" value="@Model.SearchTitle" placeholder="Enter title...">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Genre</label>
+                        <select name="genre" class="form-select">
+                            <option value="">All Genres</option>
+                            @foreach (var g in Model.AvailableGenres)
+                            {
+                                <option value="@g" selected="@(Model.SelectedGenre == g)">@g</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Year</label>
+                        <select name="year" class="form-select">
+                            <option value="">All Years</option>
+                            @foreach (var y in Model.AvailableYears.Take(50))
+                            {
+                                <option value="@y" selected="@(Model.SelectedYear == y)">@y</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Sort By</label>
+                        <select name="sortOrder" class="form-select">
+                            <option value="@SortOrder.TitleAscending" selected="@(Model.SortOrder == SortOrder.TitleAscending)">Title (A-Z)</option>
+                            <option value="@SortOrder.TitleDescending" selected="@(Model.SortOrder == SortOrder.TitleDescending)">Title (Z-A)</option>
+                            <option value="@SortOrder.YearNewest" selected="@(Model.SortOrder == SortOrder.YearNewest)">Year (Newest)</option>
+                            <option value="@SortOrder.YearOldest" selected="@(Model.SortOrder == SortOrder.YearOldest)">Year (Oldest)</option>
+                            <option value="@SortOrder.AuthorAscending" selected="@(Model.SortOrder == SortOrder.AuthorAscending)">Author (A-Z)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Group By</label>
+                        <select name="groupBy" class="form-select">
+                            <option value="@GroupBy.None" selected="@(Model.GroupBy == GroupBy.None)">None</option>
+                            <option value="@GroupBy.Author" selected="@(Model.GroupBy == GroupBy.Author)">Author</option>
+                            <option value="@GroupBy.Year" selected="@(Model.GroupBy == GroupBy.Year)">Year</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 d-flex align-items-end">
+                        <button type="submit" class="btn btn-fbz w-100"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (Model.GroupBy == GroupBy.None)
+    {
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Genre</th>
+                        <th>ISBN</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var comic in Model.Comics)
+                    {
+                        <tr>
+                            <td><strong>@comic.Title</strong></td>
+                            <td>@comic.Author</td>
+                            <td>@(comic.PublicationYear?.ToString() ?? "N/A")</td>
+                            <td><small>@comic.Genre</small></td>
+                            <td><code>@comic.DisplayISBN</code></td>
+                            <td><a asp-action="Details" asp-route-id="@comic.BLRecordID" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.TotalPages > 1)
+        {
+            <nav>
+                <ul class="pagination justify-content-center">
+                    @for (int i = 1; i <= Model.TotalPages && i <= 10; i++)
+                    {
+                        <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                            <a class="page-link" asp-action="Index" asp-route-page="@i" asp-route-searchTitle="@Model.SearchTitle" asp-route-genre="@Model.SelectedGenre" asp-route-year="@Model.SelectedYear" asp-route-sortOrder="@Model.SortOrder">@i</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    }
+    else if (Model.GroupBy == GroupBy.Author && Model.GroupedByAuthor != null)
+    {
+        @foreach (var group in Model.GroupedByAuthor.Take(20))
+        {
+            <div class="card mb-3">
+                <div class="card-header"><strong>@group.Key</strong> (@group.Value.Count comics)</div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var comic in group.Value.Take(10))
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @comic.Title
+                            <a asp-action="Details" asp-route-id="@comic.BLRecordID" class="btn btn-sm btn-outline-primary">View</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    }
+    else if (Model.GroupBy == GroupBy.Year && Model.GroupedByYear != null)
+    {
+        @foreach (var group in Model.GroupedByYear.Take(20))
+        {
+            <div class="card mb-3">
+                <div class="card-header"><strong>@group.Key</strong> (@group.Value.Count comics)</div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var comic in group.Value.Take(10))
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @comic.Title - @comic.Author
+                            <a asp-action="Details" asp-route-id="@comic.BLRecordID" class="btn btn-sm btn-outline-primary">View</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    }
+}

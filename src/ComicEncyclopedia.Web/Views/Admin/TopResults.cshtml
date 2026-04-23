@@ -1,0 +1,39 @@
+@model IEnumerable<ComicEncyclopedia.Common.DTOs.SearchResultDto>
+@{
+    ViewData["Title"] = "Top Results";
+}
+
+<div class="container mt-4">
+    <h2>Top 10 Search Results</h2>
+    <p class="text-muted">Comics that appear most frequently in search results</p>
+    
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Comic Title</th>
+                        <th>Times Returned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ var rank = 1; }
+                    @foreach (var result in Model)
+                    {
+                        <tr>
+                            <td>@rank</td>
+                            <td>@result.ComicTitle</td>
+                            <td>@result.TimesReturned</td>
+                        </tr>
+                        rank++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="mt-3">
+        <a asp-action="Dashboard" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>

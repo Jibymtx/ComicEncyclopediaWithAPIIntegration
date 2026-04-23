@@ -1,0 +1,70 @@
+@model AdvancedSearchViewModel
+@{ ViewData["Title"] = "Advanced Search"; }
+
+<h2><i class="bi bi-sliders me-2"></i>Advanced Search</h2>
+<p class="text-muted">Search using multiple criteria simultaneously</p>
+
+<div class="card">
+    <div class="card-body">
+        <form asp-action="AdvancedSearch" method="post">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" class="form-control" placeholder="Enter title keywords...">
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Author" class="form-label"></label>
+                    <input asp-for="Author" class="form-control" placeholder="Enter author name...">
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Genre" class="form-label"></label>
+                    <select asp-for="Genre" class="form-select">
+                        <option value="">Any Genre</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Year" class="form-label"></label>
+                    <select asp-for="Year" class="form-select">
+                        <option value="">Any Year</option>
+                        @foreach (var y in Model.AvailableYears.Take(100))
+                        {
+                            <option value="@y">@y</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Language" class="form-label"></label>
+                    <select asp-for="Language" class="form-select">
+                        <option value="">Any Language</option>
+                        @foreach (var l in Model.AvailableLanguages)
+                        {
+                            <option value="@l">@l</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Edition" class="form-label"></label>
+                    <input asp-for="Edition" class="form-control" placeholder="e.g., First edition, Revised...">
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="NameType" class="form-label"></label>
+                    <select asp-for="NameType" class="form-select">
+                        <option value="">Any Type</option>
+                        @foreach (var n in Model.AvailableNameTypes)
+                        {
+                            <option value="@n">@n</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-fbz"><i class="bi bi-search me-2"></i>Search</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

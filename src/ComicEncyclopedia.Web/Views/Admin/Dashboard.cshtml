@@ -1,0 +1,118 @@
+@model ReportsViewModel
+@{ ViewData["Title"] = "Staff Dashboard"; }
+
+<h2><i class="bi bi-speedometer2 me-2"></i>Staff Dashboard</h2>
+<p class="text-muted">Analytics and reporting for staff members</p>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white">
+            <div class="card-body text-center">
+                <h3>@Model.TotalSearches</h3>
+                <p class="mb-0">Total Searches</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white">
+            <div class="card-body text-center">
+                <h3>@Model.Report.TotalUniqueComicsReturned</h3>
+                <p class="mb-0">Unique Results</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark">
+            <div class="card-body text-center">
+                <h3>@Model.FlaggedRecordsCount</h3>
+                <p class="mb-0">Flagged Records</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-info text-white">
+            <div class="card-body text-center">
+                <h3>@Model.Report.ComicsOver100Results.Count</h3>
+                <p class="mb-0">Comics 100+ Results</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header"><i class="bi bi-search me-2"></i>Top 10 Search Queries</div>
+            <ul class="list-group list-group-flush">
+                @if (Model.Report.Top10Queries.Any())
+                {
+                    @foreach (var q in Model.Report.Top10Queries)
+                    {
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>@(string.IsNullOrEmpty(q.QueryDescription) ? "All Comics" : q.QueryDescription)</span>
+                            <span class="badge bg-primary">@q.TimesSearched</span>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li class="list-group-item text-muted">No search data yet</li>
+                }
+            </ul>
+            <div class="card-footer">
+                <a asp-action="TopQueries" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header"><i class="bi bi-bar-chart me-2"></i>Top 10 Search Results</div>
+            <ul class="list-group list-group-flush">
+                @if (Model.Report.Top10Results.Any())
+                {
+                    @foreach (var r in Model.Report.Top10Results)
+                    {
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>@r.ComicTitle</span>
+                            <span class="badge bg-success">@r.TimesReturned</span>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li class="list-group-item text-muted">No result data yet</li>
+                }
+            </ul>
+            <div class="card-footer">
+                <a asp-action="TopResults" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header"><i class="bi bi-gear me-2"></i>Admin Actions</div>
+    <div class="card-body">
+        <div class="d-flex gap-2 flex-wrap">
+            <a asp-action="FlaggedRecords" class="btn btn-outline-warning">
+                <i class="bi bi-flag me-1"></i>View Flagged Records (@Model.FlaggedRecordsCount)
+            </a>
+            <a asp-controller="Comics" asp-action="Upload" class="btn btn-outline-primary">
+                <i class="bi bi-upload me-1"></i>Upload CSV
+            </a>
+            <form asp-action="CheckForUpdates" method="post" style="display:inline;">
+                <button type="submit" class="btn btn-outline-info">
+                    <i class="bi bi-cloud-download me-1"></i>Check for Updates
+                </button>
+            </form>
+            @if (User.IsInRole("Admin"))
+            {
+                <form asp-action="ClearAnalytics" method="post" style="display:inline;" onsubmit="return confirm('Clear all analytics data?');">
+                    <button type="submit" class="btn btn-outline-danger">
+                        <i class="bi bi-trash me-1"></i>Clear Analytics
+                    </button>
+                </form>
+            }
+        </div>
+    </div>
+</div>

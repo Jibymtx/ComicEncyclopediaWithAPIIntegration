@@ -1,0 +1,338 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj",
+        "projectName": "ComicEncyclopedia.Business",
+        "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj",
+        "packagesPath": "C:\\Users\\jibra\\.nuget\\packages\\",
+        "outputPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj": {
+                "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj"
+              },
+              "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj": {
+                "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj",
+        "projectName": "ComicEncyclopedia.Common",
+        "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj",
+        "packagesPath": "C:\\Users\\jibra\\.nuget\\packages\\",
+        "outputPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj",
+        "projectName": "ComicEncyclopedia.Data",
+        "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj",
+        "packagesPath": "C:\\Users\\jibra\\.nuget\\packages\\",
+        "outputPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj": {
+                "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj",
+        "projectName": "ComicEncyclopedia.Web",
+        "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\ComicEncyclopedia.Web.csproj",
+        "packagesPath": "C:\\Users\\jibra\\.nuget\\packages\\",
+        "outputPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj": {
+                "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Business\\ComicEncyclopedia.Business.csproj"
+              },
+              "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj": {
+                "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Common\\ComicEncyclopedia.Common.csproj"
+              },
+              "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj": {
+                "projectPath": "D:\\ComicEncyclopedia_JibraeelFinished\\src\\ComicEncyclopedia.Data\\ComicEncyclopedia.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@model List<ComicDto>
+@{ ViewData["Title"] = "Flagged Records"; }
+
+<h2><i class="bi bi-flag me-2"></i>Flagged Records</h2>
+<p class="text-muted">@Model.Count records flagged for review</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-success">
+        <i class="bi bi-check-circle me-2"></i>No records currently flagged for review.
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Reason</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comic in Model)
+                {
+                    <tr>
+                        <td><a asp-controller="Comics" asp-action="Details" asp-route-id="@comic.BLRecordID">@comic.Title</a></td>
+                        <td>@comic.Author</td>
+                        <td><small>@(comic.FlagReason ?? "No reason provided")</small></td>
+                        <td>
+                            <form asp-action="UnflagRecord" asp-route-id="@comic.BLRecordID" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-success" title="Resolve">
+                                    <i class="bi bi-check"></i> Resolve
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<a asp-action="Dashboard" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i>Back to Dashboard</a>
