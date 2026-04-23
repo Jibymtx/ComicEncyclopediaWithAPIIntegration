@@ -400,3 +400,4 @@ D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Web\obj\Debug\net8.0
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Web\obj\Debug\net8.0\ComicEncyclopedia.Web.pdb
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Web\obj\Debug\net8.0\ComicEncyclopedia.Web.genruntimeconfig.cache
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Web\obj\Debug\net8.0\ref\ComicEncyclopedia.Web.dll
+D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Web\obj\Debug\net8.0\ComicEncyclopedia.Web.sourcelink.json

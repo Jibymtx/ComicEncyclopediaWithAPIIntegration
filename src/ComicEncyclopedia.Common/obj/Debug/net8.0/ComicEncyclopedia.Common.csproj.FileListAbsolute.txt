@@ -31,3 +31,4 @@ D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Common\obj\Debug\net
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Common\obj\Debug\net8.0\refint\ComicEncyclopedia.Common.dll
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Common\obj\Debug\net8.0\ComicEncyclopedia.Common.pdb
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Common\obj\Debug\net8.0\ref\ComicEncyclopedia.Common.dll
+D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Common\obj\Debug\net8.0\ComicEncyclopedia.Common.sourcelink.json

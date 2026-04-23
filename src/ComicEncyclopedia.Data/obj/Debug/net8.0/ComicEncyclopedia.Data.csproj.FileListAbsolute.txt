@@ -49,3 +49,4 @@ D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Data\obj\Debug\net8.
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Data\obj\Debug\net8.0\ComicEncyclopedia.Data.pdb
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Data\obj\Debug\net8.0\ComicEncyclopedia.Data.genruntimeconfig.cache
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Data\obj\Debug\net8.0\ref\ComicEncyclopedia.Data.dll
+D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Data\obj\Debug\net8.0\ComicEncyclopedia.Data.sourcelink.json

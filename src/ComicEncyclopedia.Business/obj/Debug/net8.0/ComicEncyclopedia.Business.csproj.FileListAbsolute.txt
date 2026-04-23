@@ -49,3 +49,4 @@ D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Business\obj\Debug\n
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Business\obj\Debug\net8.0\refint\ComicEncyclopedia.Business.dll
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Business\obj\Debug\net8.0\ComicEncyclopedia.Business.pdb
 D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Business\obj\Debug\net8.0\ref\ComicEncyclopedia.Business.dll
+D:\ComicEncyclopedia_JibraeelFinished\src\ComicEncyclopedia.Business\obj\Debug\net8.0\ComicEncyclopedia.Business.sourcelink.json

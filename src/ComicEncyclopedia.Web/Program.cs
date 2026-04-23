@@ -26,9 +26,25 @@ builder.Services.Configure<FormOptions>(options =>
     options.MemoryBufferThreshold = int.MaxValue;
 });
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? "Data Source=ComicEncyclopedia.db"));
+var dbProvider = builder.Configuration["DatabaseProvider"] ?? "Sqlite";
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? "Data Source=ComicEncyclopedia.db";
+
+var healthChecksBuilder = builder.Services.AddHealthChecks();
+
+if (dbProvider.Equals("SqlServer", StringComparison.OrdinalIgnoreCase)
+    || dbProvider.Equals("AzureSql", StringComparison.OrdinalIgnoreCase))
+{
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(connectionString, sql => sql.EnableRetryOnFailure()));
+    healthChecksBuilder.AddSqlServer(connectionString, name: "database");
+}
+else
+{
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlite(connectionString));
+    healthChecksBuilder.AddSqlite(connectionString, name: "database");
+}
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
@@ -169,6 +185,8 @@ app.UseCors("AllowAll");
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapHealthChecks("/health");
 
 app.MapControllerRoute(
     name: "default",
