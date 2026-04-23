@@ -26,8 +26,8 @@ RUN dotnet publish src/ComicEncyclopedia.Web/ComicEncyclopedia.Web.csproj \
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 
-RUN groupadd --system --gid 1000 app \
- && useradd  --system --uid 1000 --gid app --create-home --home-dir /home/app app
+RUN addgroup --system --gid 1000 app \
+ && adduser --system --uid 1000 --ingroup app --home /home/app app
 
 ENV ASPNETCORE_URLS=http://+:8080 \
     ASPNETCORE_ENVIRONMENT=Production \
