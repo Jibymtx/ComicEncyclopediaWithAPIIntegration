@@ -11,8 +11,8 @@ env:
   DOTNET_VERSION: '8.0.x'
   SOLUTION_FILE: ComicEncyclopedia.sln
   WEB_PROJECT: src/ComicEncyclopedia.Web/ComicEncyclopedia.Web.csproj
-  ACR_NAME: comicencyclopediaacr
-  ACR_LOGIN_SERVER: comicencyclopediaacr.azurecr.io
+  ACR_NAME: comicencyclopediabmc
+  ACR_LOGIN_SERVER: comicencyclopediabmc.azurecr.io
   IMAGE_NAME: comic-encyclopedia-web
   AZURE_WEBAPP_NAME: comic-encyclopedia-web
   AZURE_RESOURCE_GROUP: comic-encyclopedia-rg
